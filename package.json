@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "proyectoapi",
+  "version": "1.0.0",
+  "description": "Proyecto para módulo JavaScript Avanzado",
+  "main": "main.js",
+  "scripts": {
+    "nodemon":"nodemon main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
