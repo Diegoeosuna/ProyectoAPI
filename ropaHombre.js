@@ -1,11 +1,11 @@
- import {
-    buscarTodosLosProductos
+import {
+    buscarTodaLaRopaHombre
  } from "./api.js"
 
  const root = document.getElementById("root");
 
 async function mostrarProductos(){
-    const productos = await buscarTodosLosProductos();
+    const productos = await buscarTodaLaRopaHombre();
 
     for (let i = 0; i < productos.length; i++){
         const producto = productos[i];

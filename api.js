@@ -1,10 +1,11 @@
 const urlFake = "https://fakestoreapi.com/products";
 
+//Buscar todos los productos
 export async function buscarTodosLosProductos(){
     const data = await fetch(`${urlFake}`);
     const dataJson = await data.json();
         // const productosObtenidos = dataJson.id;
-    const resultadosFormateados = []
+    const resultadosFormateados = [];
 
     dataJson.forEach((producto) => {
         let productoFormateado = {
@@ -19,6 +20,82 @@ export async function buscarTodosLosProductos(){
     return resultadosFormateados;
 }
 
+
+//Buscar los productos de ropa de hombre
+export async function buscarTodaLaRopaHombre(){
+    const data = await fetch (`${urlFake}/category/men's%20clothing`);
+    const dataJson = await data.json();
+
+    const resultadosFormateados = [];
+
+    dataJson.forEach((producto) => {
+        let productoFormateado = {
+            titulo: producto.title,
+            precio: producto.price,
+            imagen: producto.image,
+            descripcion: producto.description,
+        };
+        resultadosFormateados.push(productoFormateado)
+    });
+    return resultadosFormateados;
+}
+
+//Buscar los productos de ropa de mujer
+export async function buscarTodaLaRopaMujer(){
+    const data = await fetch (`${urlFake}/category/women's%20clothing`);
+    const dataJson = await data.json();
+
+    const resultadosFormateados = [];
+
+    dataJson.forEach((producto) => {
+        let productoFormateado = {
+            titulo: producto.title,
+            precio: producto.price,
+            imagen: producto.image,
+            descripcion: producto.description,
+        };
+        resultadosFormateados.push(productoFormateado)
+    });
+    return resultadosFormateados;
+}
+
+//Buscar los productos de joyas
+export async function buscarTodaLasJoyas(){
+    const data = await fetch (`${urlFake}/category/jewelery`);
+    const dataJson = await data.json();
+
+    const resultadosFormateados = [];
+
+    dataJson.forEach((producto) => {
+        let productoFormateado = {
+            titulo: producto.title,
+            precio: producto.price,
+            imagen: producto.image,
+            descripcion: producto.description,
+        };
+        resultadosFormateados.push(productoFormateado)
+    });
+    return resultadosFormateados;
+}
+
+//Buscar los productos de electrónica
+export async function buscarTodaLaElectronica(){
+    const data = await fetch (`${urlFake}/category/electronics`);
+    const dataJson = await data.json();
+
+    const resultadosFormateados = [];
+
+    dataJson.forEach((producto) => {
+        let productoFormateado = {
+            titulo: producto.title,
+            precio: producto.price,
+            imagen: producto.image,
+            descripcion: producto.description,
+        };
+        resultadosFormateados.push(productoFormateado)
+    });
+    return resultadosFormateados;
+}
 
 // const url = "https://rickandmortyapi.com/api";
 
